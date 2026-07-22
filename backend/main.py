@@ -7,10 +7,23 @@ from fastapi.staticfiles import StaticFiles
 from . import models
 from .database import engine
 from .routers import activities, applications, auth, members, recommendations
+from fastapi.middleware.cors import CORSMiddleware  # 為了要給前端用
 
 models.Base.metadata.create_all(bind=engine)
 
 app = FastAPI(title="Jiu-Eat API", version="1.1.0")
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=[
+        "https://jiu-eat-system.vercel.app",
+        "http://localhost:8000",
+        "http://127.0.0.1:8000",
+    ],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 app.include_router(auth.router)
 app.include_router(members.router)
 app.include_router(activities.router)
