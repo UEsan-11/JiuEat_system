@@ -16,11 +16,10 @@ uv sync
 uv run uvicorn backend.main:app --reload
 ```
 
-- 網頁：<http://127.0.0.1:8000/>
+- **網頁：<http://127.0.0.1:8000/>**
 - API 文件：<http://127.0.0.1:8000/docs>
 - 健康檢查：<http://127.0.0.1:8000/api/health>
 
-不需要再啟動 5500，也不要在 `backend/` 目錄內執行指令。
 
 ## 分層規則
 
@@ -39,7 +38,7 @@ uv pip install -r requirements.txt
 
 
 
-###  備註一下git指令
+####  備註:git指令 (請忽略)
 
 ```
 git switch 你的分支名稱
