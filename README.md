@@ -37,6 +37,12 @@ uv venv
 #### 安裝 requirements.txt 中的所有套件
 uv pip install -r requirements.txt
 
+### fortest
+
+展示帳號：`amy@example.com`、`ben@example.com`；密碼皆為 `password123`。
+
+> 不要直接雙擊 `index.html`，請使用本機 HTTP Server，前後端連線會比較穩定。
+
 
 
 ###  備註一下git指令

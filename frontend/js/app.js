@@ -1,4 +1,4 @@
-const API_BASE = "http://127.0.0.1:8000";
+const API_BASE = "https://jiueat-system.onrender.com";   // 原本是"http://127.0.0.1:8000"
 const state = { activities: [], visible: 8, currentActivity: null };
 const $ = (selector) => document.querySelector(selector);
 const $$ = (selector) => [...document.querySelectorAll(selector)];
